@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.3.8-dist/ccs/bootstrap.min.ccs')}}">
     <title>Document</title>
 </head>
 <body>
     <h1>Welcome {{name}} To My Flask App</h1>
     <p>Now Utilizing Jinja2 & Templates</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Business name</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                       <a class="nav-link" href="/">Home</a>
+                    </li> 
+                    <li class="nav-item">
+                       <a class="nav-link" href="#">your projects</a>
+                    </li> 
+                    <li class="nav-item">
+                       <a class="nav-link" href="#">recorces</a>
+                    </li> 
+                    <li class="nav-item">
+                       <a class="nav-link" href="#">about</a>
+                    </li> 
+                    <li class="nav-item">
+                       <a class="nav-link" href="#">sign up</a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script stc="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundel.min.js')}}"></script>
 </body>
-</html>
+</html> 
