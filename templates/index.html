@@ -1,38 +1,126 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.3.8-dist/ccs/bootstrap.min.ccs')}}">
-    <title>Document</title>
+    <title>SoundSpark Studios - Home</title>
+    <link rel="stylesheet" href="/static/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+    <style>
+        /* Hero Gradient Background */
+        .hero {
+            background: linear-gradient(135deg, #6f42c1, #d63384);
+            color: white;
+            padding: 80px 0;
+            min-height: 50vh; /* allows page to scroll if content is longer */
+        }
+
+        /* Card Hover Effect */
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Button Hover Animation */
+        .btn-primary:hover {
+            background-color: #5a32a3;
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Services Cards Hover */
+        .service-card {
+            border: none;
+            border-radius: 0.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Smooth transition for footer hover link (optional) */
+        footer a:hover {
+            color: #ffc107;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body>
-    <h1>Welcome {{name}} To My Flask App</h1>
-    <p>Now Utilizing Jinja2 & Templates</p>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Business name</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                       <a class="nav-link" href="/">Home</a>
-                    </li> 
-                    <li class="nav-item">
-                       <a class="nav-link" href="#">your projects</a>
-                    </li> 
-                    <li class="nav-item">
-                       <a class="nav-link" href="#">recorces</a>
-                    </li> 
-                    <li class="nav-item">
-                       <a class="nav-link" href="#">about</a>
-                    </li> 
-                    <li class="nav-item">
-                       <a class="nav-link" href="#">sign up</a>
-                    </li> 
-                </ul>
+
+<body class="d-flex flex-column bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">SoundSpark Studios</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="/">Inspo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Your Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2" href="#">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Welcome to SoundSpark Studios</h1>
+        <p class="lead mb-0">Your hub for music creation, learning, and community.</p>
+    </div>
+</div>
+
+<div class="container mt-5">
+
+    <!-- Services / Workshops Section -->
+    <h2 class="mb-4 text-center fw-bold">Our Services & Workshops</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card service-card h-100 text-center p-3 shadow-sm bg-white">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Recording Sessions</h5>
+                    <p class="card-text">Professional-quality recording for artists, bands, and content creators.</p>
+                </div>
             </div>
         </div>
-    </nav>
-    <script stc="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundel.min.js')}}"></script>
+
+        <div class="col">
+            <div class="card service-card h-100 text-center p-3 shadow-sm bg-white">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Production Workshops</h5>
+                    <p class="card-text">Learn beat-making, mixing, and DAW skills in hands-on classes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card service-card h-100 text-center p-3 shadow-sm bg-white">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Mentorship Programs</h5>
+                    <p class="card-text">Guidance and support for youth and aspiring artists to grow creatively.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<footer class="bg-dark text-white text-center p-3 mt-auto shadow-sm">
+    © 2025 SoundSpark Studios. All rights reserved.
+</footer>
+
+<script src="/static/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
